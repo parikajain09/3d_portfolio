@@ -5,13 +5,15 @@ import  Island from '../models/Island'
 import Sky from '../models/Sky'
 import Bird from '../models/Bird'
 import Plane from '../models/Plane'
+import HomeInfo from '../components/HomeInfo'
 
-  {/* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-        POPUP
-      </div> */}
+  
 
 const Home = () => {
+
+  const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
+ 
 
 
   const adjustIslandForScreenSize = () => {
@@ -46,12 +48,19 @@ const Home = () => {
 
   const [ islandScale, islandPosition, islandRotation ] = adjustIslandForScreenSize();
   const [planeScale, planePosition] = adjustPlaneForScreenSize();
+
   return (
     <section className="w-full h-screen relative">
-     <Canvas
-     className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
-     camera={{ near: 0.1, far: 1000}}
-     >
+      <div className="absolute top-10 left-0 right-12 z-10 flex items-center justify-center pointer-events-none">
+        <div className='pointer-events-auto'>
+       <HomeInfo  currentStage = {currentStage} />
+        </div>
+        </div>
+
+    <Canvas
+      className={`w-full h-screen bg-transparent ${ isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
+      camera={{ near: 0.1, far: 1000}}
+    >
 
       
       <Suspense fallback={<Loader />}>
@@ -62,13 +71,14 @@ const Home = () => {
         <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
 
         <Bird />
-        <Sky />
+        <Sky isRotating={isRotating}/>
         <Island 
         position={islandPosition}
         scale={islandScale}
         rotation={islandRotation}
         isRotating={isRotating}
         setIsRotating={setIsRotating} 
+        setCurrentStage={setCurrentStage}
         />
         <Plane 
         isRotating={isRotating}
@@ -79,14 +89,13 @@ const Home = () => {
 
 
 
-        </Suspense>
+      </Suspense>
 
-     </Canvas>
+    </Canvas>
 
-    </section>
-  )
-}
+  </section>
+  )}
 
-export default Home
+export default Home;
 
 
