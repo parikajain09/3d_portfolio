@@ -1,5 +1,5 @@
 import React from 'react'
-import { skills, experiences } from '../constants'
+import { skills, experiences, socialLinks } from '../constants'
 import CTA from '../components/CTA'
 
 const About = () => {
@@ -105,6 +105,25 @@ const About = () => {
 
       <hr className="border-slate-200 " />
       <CTA />
+
+      <div className="mt-16 social-links flex flex-wrap gap-6 justify-center">
+  {socialLinks.map((item, index) => (
+    <a 
+      key={index} 
+      href={item.link} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="social-item flex items-center gap-3 hover:opacity-80"
+    >
+      <img 
+        src={item.iconUrl} 
+        alt={item.name} 
+        className="w-6 h-6"
+      />
+      <span>{item.name}</span>
+    </a>
+  ))}
+</div>
     </section>
   )
 }
