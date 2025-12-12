@@ -45,8 +45,8 @@ This project is a *3D portfolio* designed to stand out from traditional portfoli
 *Animations:*
 -  ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat&logo=greensock&logoColor=white)
   
-* Hosting:*
-- ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white) 
+*Hosting:*
+-  ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white) 
 
 ---
 
