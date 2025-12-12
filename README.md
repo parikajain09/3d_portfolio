@@ -1,9 +1,9 @@
 # 🚀 3D Interactive Portfolio
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/3D-portfolio) 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/3D-portfolio?style=social) 
-![GitHub forks](https://img.shields.io/github/forks/yourusername/3D-portfolio?style=social)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/3D-portfolio)
+![GitHub repo size](https://img.shields.io/github/repo-size/parikajain09/3D-portfolio) 
+![GitHub stars](https://img.shields.io/github/stars/parikajain09/3D-portfolio?style=social) 
+![GitHub forks](https://img.shields.io/github/forks/parikajain09/3D-portfolio?style=social)
+![GitHub issues](https://img.shields.io/github/issues/parikajain09/3D-portfolio)
 
 A *3D interactive portfolio* showcasing my projects, skills, and experience using *Three.js* and modern web technologies. This portfolio provides an immersive experience with smooth animations and interactive elements.
 
@@ -17,9 +17,7 @@ A *3D interactive portfolio* showcasing my projects, skills, and experience usin
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+
 
 ---
 
